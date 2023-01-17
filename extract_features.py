@@ -16,7 +16,7 @@ def write_fetures_pre(lp_file, collection_dir, collection_csv_dir):
                       bytes(f'{collection_csv_dir}/{instance_name}.csv', encoding='utf8'),
                       bytes(instance_name, encoding='utf8'))
 
-mf = ctypes.CDLL(".ModelFeatures/x64/Debug/ModelFeatures.dll")
+mf = ctypes.CDLL("./ModelFeatures.dll")
 lp_files = [f for f in listdir("collection") if isfile(join("collection", f))]
 
 if __name__ == '__main__':
